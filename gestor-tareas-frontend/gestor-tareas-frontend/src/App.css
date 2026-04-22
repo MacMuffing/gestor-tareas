@@ -1,0 +1,259 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f0f2f5;
+    color: #333;
+}
+
+/* ── Layout ─────────────────────────────────────── */
+.app-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 16px;
+}
+
+.app-header {
+    margin-bottom: 24px;
+}
+
+    .app-header h1 {
+        font-size: 1.8rem;
+        color: #1a1a2e;
+    }
+
+.app-main {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.sidebar {
+    width: 320px;
+    flex-shrink: 0;
+}
+
+.content {
+    flex: 1;
+}
+
+/* ── Formulario ─────────────────────────────────── */
+.task-form {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+    .task-form h2 {
+        margin-bottom: 16px;
+        font-size: 1.1rem;
+        color: #1a1a2e;
+    }
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 14px;
+}
+
+    .form-group label {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #555;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 8px 10px;
+        font-size: 0.95rem;
+        outline: none;
+        transition: border-color 0.2s;
+    }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #4f46e5;
+        }
+
+.form-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+/* ── Filtro ─────────────────────────────────────── */
+.filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+    .filter-bar span {
+        font-size: 0.9rem;
+        color: #555;
+    }
+
+.filter-btn {
+    padding: 6px 14px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+    .filter-btn:hover {
+        border-color: #4f46e5;
+        color: #4f46e5;
+    }
+
+    .filter-btn.active {
+        background: #4f46e5;
+        color: #fff;
+        border-color: #4f46e5;
+    }
+
+/* ── Lista de tareas ────────────────────────────── */
+.task-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.task-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.task-info h3 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.task-info p {
+    font-size: 0.88rem;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.task-info small {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.78rem;
+    color: #999;
+}
+
+.task-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* ── Badges de estado ───────────────────────────── */
+.badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.badge-pendiente {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.badge-progreso {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.badge-completada {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+/* ── Botones ─────────────────────────────────────── */
+.btn-primary {
+    background: #4f46e5;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 9px 18px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+    .btn-primary:hover {
+        background: #4338ca;
+    }
+
+.btn-secondary {
+    background: #f3f4f6;
+    color: #374151;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 9px 18px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.btn-edit {
+    background: #f0fdf4;
+    color: #16a34a;
+    border: 1px solid #bbf7d0;
+    border-radius: 6px;
+    padding: 6px 14px;
+    cursor: pointer;
+    font-size: 0.82rem;
+}
+
+.btn-delete {
+    background: #fff1f2;
+    color: #e11d48;
+    border: 1px solid #fecdd3;
+    border-radius: 6px;
+    padding: 6px 14px;
+    cursor: pointer;
+    font-size: 0.82rem;
+}
+
+/* ── Mensajes ────────────────────────────────────── */
+.status-msg {
+    padding: 12px;
+    border-radius: 8px;
+    background: #f3f4f6;
+    color: #555;
+}
+
+    .status-msg.error {
+        background: #fff1f2;
+        color: #e11d48;
+    }
+
+.empty-msg {
+    color: #999;
+    text-align: center;
+    padding: 40px 0;
+}
