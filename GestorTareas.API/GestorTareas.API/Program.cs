@@ -25,7 +25,7 @@ builder.Services.AddControllers()
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// ── CORS (permite que React en localhost consuma la API) ───
+// ── CORS (permite que React en localhost consuma la API ) ──
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReact", policy =>

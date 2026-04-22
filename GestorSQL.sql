@@ -13,6 +13,8 @@ GO
 USE GestorTareas;
 GO
 
+-- Consulta si existe una base de datos llamada GestorTareas en el servidor, y si no existe, la crea y luego utiliza.
+
 -- ============================================================
 --  CREACIÓN DE TABLAS
 -- ============================================================
@@ -31,6 +33,8 @@ BEGIN
     );
 END
 GO
+
+--Ahora consulta si existe una tabla de Users, en caso de que no exista, la crea con los parametros que le pasa
 
 -- Tabla: Tasks
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Tasks')

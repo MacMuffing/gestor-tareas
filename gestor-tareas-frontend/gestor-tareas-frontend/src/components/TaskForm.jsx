@@ -45,7 +45,7 @@ export function TaskForm({ onSubmit, editingTask, onCancel }) {
                     name="titulo"
                     value={form.titulo}
                     onChange={handleChange}
-                    placeholder="Título de la tarea"
+                    placeholder="Titulo de la tarea"
                 />
             </div>
 
@@ -55,7 +55,7 @@ export function TaskForm({ onSubmit, editingTask, onCancel }) {
                     name="descripcion"
                     value={form.descripcion}
                     onChange={handleChange}
-                    placeholder="Descripción opcional"
+                    placeholder="Descripcion opcional"
                     rows={3}
                 />
             </div>
